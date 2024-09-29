@@ -2,7 +2,6 @@ const billAmount = document.getElementById('bill'),
       tipPercent = document.querySelectorAll('input[name="tip"]'),
       numberOfPersons = document.getElementById('people'),
 
-
       calcBtn = document.getElementById('calculate'),
       resetBtn = document.getElementById('reset'),
 
@@ -47,13 +46,12 @@ calcBtn.addEventListener('click',()=>{
     }
 })
 
-
-
-
 resetBtn.addEventListener('click',() =>{
     billAmount.value = '';
     numberOfPersons.value = '';
     for (i=0;i<tipPercent.length;i++){
         tipPercent[i].checked = false
     }
+    tipPerson.textContent = '---$';
+    totalPerson.textContent = '---$';  
 });
